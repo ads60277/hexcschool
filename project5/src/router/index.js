@@ -19,6 +19,10 @@ const routes = [
         component: () => import('../views/About.vue')
       },
       {
+        path: '/login',
+        component: () => import('../views/Login.vue')
+      },
+      {
         path: '/products',
         component: () => import('../views/Products.vue')
       },
@@ -37,12 +41,12 @@ const routes = [
     component: () => import('../views/backend/BackHome.vue'),
     children: [
       {
-        path: '/backend/login',
-        component: () => import('../views/backend/Login.vue')
-      },
-      {
         path: '/backend/orders',
         component: () => import('../views/backend/Orders.vue')
+      },
+      {
+        path: '/backend/coupons',
+        component: () => import('../views/backend/Coupons.vue')
       },
       {
         path: '/backend/products',

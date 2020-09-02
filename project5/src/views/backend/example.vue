@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <Loading :active.sync="isLoading" />
@@ -316,10 +315,12 @@
 
 <script>
 /* global $ */
+import { VueEditor } from 'vue2-editor/dist/vue2-editor.core'
 import Pagination from '@/components/Pagination.vue'
 export default {
   name: 'Products',
   components: {
+    VueEditor,
     Pagination
   },
   data () {
@@ -334,7 +335,7 @@ export default {
       status: {
         fileUploading: false
       },
-      uuid: process.env.VUE_APP_UUID
+      uuid: process.env.VUE_APP_UID
     }
   },
   created () {
@@ -449,3 +450,11 @@ export default {
   }
 }
 </script>
+
+<style lang="css">
+@import '~vue2-editor/dist/vue2-editor.css';
+/* Import the Quill styles you want */
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+</style>
