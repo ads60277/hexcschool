@@ -14,6 +14,11 @@ const routes = [
     component: Home,
     children: [
       {
+        path: '/index',
+        name: 'Index',
+        component: () => import('../views/Index.vue')
+      },
+      {
         path: '/about',
         name: 'About',
         component: () => import('../views/About.vue')
@@ -33,6 +38,18 @@ const routes = [
       {
         path: '/product/:id',
         component: () => import('../views/Product.vue')
+      },
+      {
+        path: '/brand',
+        component: () => import('../views/IntroBrand.vue')
+      },
+      {
+        path: '/confirm',
+        component: () => import('../views/ConfirmOrder.vue')
+      },
+      {
+        path: '/finish',
+        component: () => import('../views/OrderFinish.vue')
       }
     ]
   },

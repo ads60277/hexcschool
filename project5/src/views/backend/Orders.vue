@@ -84,7 +84,7 @@ export default {
     // 抓到訂單頁
     getOrders (page = 1) {
       this.isLoading = true
-      const url = `${process.env.VUE_APP_APIPATH}api/${process.env.VUE_APP_UUID}/admin/ec/orders?page=${page}&paged=${this.paged}`
+      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_UUID}/admin/ec/orders?page=${page}&paged=${this.paged}`
       this.$http.get(url)
         .then((res) => {
           console.log(res)
@@ -92,15 +92,11 @@ export default {
           this.orders = res.data.data
           this.pagination = res.data.meta.pagination
         })
-        .catch(() => {
-          this.isLoading = false
-          this.$toastr.e('無法顯示訂單列表')
-        })
     },
     // 抓到單一訂單
     getOrder (id) {
       this.loadingItem = id
-      const url = `${process.env.VUE_APP_APIPATH}api/${process.env.VUE_APP_UUID}/admin/ec/orders/${id}`
+      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_UUID}/admin/ec/orders/${id}`
       this.$http.get(url)
         .then((res) => {
           this.loadingItem = ''
@@ -116,7 +112,7 @@ export default {
     updatePaid (id, status) {
       this.isLoading = true
       const parm = status ? 'paid' : 'unpaid'
-      const url = `${process.env.VUE_APP_APIPATH}api/${process.env.VUE_APP_UUID}/admin/ec/orders/${id}/${parm}`
+      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_UUID}/admin/ec/orders/${id}/${parm}`
       this.$http.patch(url)
         .then(() => {
           this.isLoading = false

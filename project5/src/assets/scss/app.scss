@@ -1,2 +1,26 @@
 @import "~bootstrap/scss/functions";
+@import "./variables";
+@import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/bootstrap";
+
+// frontend
+@import "./frontend/home";
+@import "./frontend/index";
+@import "./frontend/about";
+@import "./frontend/cart";
+@import "./frontend/confirmorder";
+@import "./frontend/introbrand";
+@import "./frontend/login";
+@import "./frontend/product";
+@import "./frontend/products";
+@import "./frontend/header";
+@import "./frontend/footer";
+@import "./frontend/finish";
+
+
+// backend
+@import "./backend/backhome";
+@import "./backend/coupons";
+@import "./backend/orders";
+@import "./backend/picstorage";
+@import "./backend/products";

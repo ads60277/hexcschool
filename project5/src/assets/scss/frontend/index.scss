@@ -1,0 +1,51 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+#nav {
+  height: 100px;
+  width: 100%;
+  // background-color: rgb(236, 226, 226);
+  z-index: 999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  opacity: .85;
+}
+
+.banner {
+  background-image: url('~@/assets/img/pexels-ketut-subiyanto-4246043.jpg');
+  height: 60vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.body {
+  padding: 5%;
+  display: flex;
+  .picreviewbox {
+    display: flex;
+  }
+}
+footer{
+  background-color: rgb(168, 168, 168);
+  margin-top: 30px;
+  padding: 2%;
+  
+}
+.introductbox{
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .jumbotron{
+    background-color: Transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
